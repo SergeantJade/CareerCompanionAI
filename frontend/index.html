@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Career Companion AI - Production</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>🚀 Career Companion AI</h1>
+    <p>Real-Time Career Analysis & Market Insights ✨</p>
+  </header>
+  <nav class="navigation">
+  <a href="index.html" class="nav-link active">🏠 Home</a>
+  <a href="about.html" class="nav-link">ℹ️ About</a>
+</nav>
+
+  <main>
+    <section class="intro-animation">
+      <svg class="heartbeat" viewBox="0 0 100 110">
+        <defs>
+          <filter id="dot-glow" x="-100%" y="-100%" width="300%" height="300%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"/>
+            <feMerge>
+              <feMergeNode in="blur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+        <path id="pulse"
+          d="M10,55 Q22,75 35,60 Q44,48 50,60 Q53,68 60,55 Q66,44 72,65 Q83,89 90,50"
+          fill="none"
+          stroke="#ff6b6b"
+          stroke-width="6"
+          stroke-linecap="round"
+        />
+        <circle
+          id="heart-dot"
+          r="10"
+          fill="#4ecdc4"
+          stroke="#fff"
+          stroke-width="4"
+        />
+      </svg>
+    </section>
+
+    <section id="skill-input">
+      <h2>✨ Enter Your Profile for Real-Time AI Analysis</h2>
+      <form id="profileForm" autocomplete="off">
+        <div class="group">
+          <label for="skills">🎯 Skills (comma separated):</label>
+          <input type="text" id="skills" name="skills" placeholder="e.g., Python, JavaScript, Machine Learning, Communication" required>
+        </div>
+        <div class="group">
+          <label for="projects">🛠️ Project Experience:</label>
+          <textarea id="projects" name="projects" rows="3" placeholder="Describe your key projects and achievements"></textarea>
+        </div>
+        <div class="group">
+          <label for="events">🎪 Events & Experience:</label>
+          <input type="text" id="events" name="events" placeholder="Hackathons, Conferences, Certifications, Work Experience">
+        </div>
+        <div class="group">
+          <label for="experience">📊 Experience Level:</label>
+          <select id="experience" name="experience">
+            <option value="beginner">Beginner (0-1 years)</option>
+            <option value="intermediate">Intermediate (1-3 years)</option>
+            <option value="advanced">Advanced (3-5 years)</option>
+            <option value="expert">Expert (5+ years)</option>
+          </select>
+        </div>
+        <div class="group">
+          <label for="location">🌍 Location:</label>
+          <input type="text" id="location" name="location" placeholder="e.g., New York, Remote, India">
+        </div>
+        <button type="submit" id="analyzeBtn">🚀 Get Real-Time Career Analysis!</button>
+      </form>
+      
+      <div class="loading" id="loadingState">
+        <div class="spinner"></div>
+        <div>🤖 AI is analyzing your profile...</div>
+        <div>📊 Fetching real-time job market data...</div>
+        <div>💼 Calculating skill demand trends...</div>
+        <div>💰 Getting salary insights...</div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="suggestions">
+      <div id="results"></div>
+    </section>
+  </main>
+  <footer>
+    <p>Built with Real-Time APIs | Production Ready | 2025 💫</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
